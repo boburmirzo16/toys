@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Lora:ital,wght@1,400;1,500&family=Montserrat:ital,wght@0,400;0,500;1,400&family=Playfair+Display:ital,wght@0,500;1,400&family=Raleway:ital,wght@0,600;1,500&family=Roboto:ital,wght@1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.navbar__nav i{
+  color: #fff;
+  display: none;
+}
+
+:root {
+ --monster: "Montserrat", sans-serif;
+ --real: "Raleway", sans-serif;
+}
+.navigation {
+  width: 100%;
+  height: 9vh;
+  background-color: #000000;
+  position: fixed ;
+  z-index: 9999;
+  top: 0;
+}
+.navigation .navbar {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigation .navbar img {
+  width: 30%;
+}
+.navigation .navbar a {
+  color: white;
+  margin-right: 15px;
+  margin-left: 15px;
+  font-family: var(--real);
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  transition: all 0.5s linear;
+}
+.navigation .navbar a:hover {
+  color: red;
+}
+.header {
+  width: 100%;
+  height: 80vh;
+  background-image: url(/img/header.jpg);
+  background-size: 100% 100%;
+}
+.header .banner {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .banner h1 {
+  font-size: 3rem;
+  color: white;
+  font-family: var(--real);
+  animation: matn 10s linear infinite;
+}
+.header .banner h1 span {
+  color: red;
+}
+@keyframes matn {
+  0% {
+    letter-spacing: 2px;
+  }
+  50% {
+    letter-spacing: 1px;
+  }
+  100% {
+    letter-spacing: 2px;
+  }
+}
+.marvel {
+  width: 90%;
+  padding: 4rem 0;
+  background-color: whitesmoke;
+}
+.marvel .title {
+  text-align: center;
+  font-family: var(--monster);
+  font-size: 2rem;
+  margin: 0 auto;
+}
+.marvel .title h2 {
+  display: inline;
+  border-bottom: 5px solid red;
+  padding-bottom: 0.5rem;
+}
+.marvel__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.marvel__content .item {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  transition: all 1s linear;
+}
+.marvel h2 {
+  margin-left: 10%;
+}
+.marvel__content .item button {
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 30px;
+  transition: all 1s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+.marvel__content .item button::after {
+  content: "";
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: aquamarine;
+  left: 0;
+  top: 0;
+  transition: all 1s linear;
+  z-index: -1;
+}
+.marvel__content .item button:hover::after {
+  width: 100%;
+}
+.marvel__content .item button:hover {
+  color: white;
+}
+.animal {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #fff;
+}
+.animal .title {
+  text-align: center;
+  font-family: var(--lora);
+  font-size: 2rem;
+}
+.animal .title h2 {
+  display: inline;
+  border-bottom: 5px solid rgb(0, 60, 224);
+  padding-bottom: 0.5rem;
+}
+
+.animal__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.animal__content .item {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  transition: all 1s linear;
+}
+.animal__content .item:hover {
+  box-shadow: 0 0 20px #000000;
+}
+.animal__content .item .img {
+  overflow: hidden;
+}
+.animal__content .item .img img {
+  transition: all 1s linear;
+}
+.animal__content .item .img:hover img {
+  transform: scale(1.2);
+}
+.animal__content .item h2 {
+  font-size: 1.5rem;
+  font-family: var(--monster);
+}
+.animal__content .item button {
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 30px;
+  transition: all 0.5s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+.discover__content .item button::after {
+  content: "";
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: yellow;
+  left: 0;
+  top: 0;
+  transition: all 1s linear;
+  z-index: -1;
+}
+.discover__content .item button:hover::after {
+  width: 100%;
+}
+.discover__content .item button:hover {
+  color: white;
+}
+
+.discover {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: #fff;
+}
+.discover .title {
+  text-align: center;
+  font-family: var(--lora);
+  font-size: 2rem;
+}
+.discover .title h2 {
+  display: inline;
+  border-bottom: 5px solid rgb(0, 60, 224);
+  padding-bottom: 0.5rem;
+}
+
+.discover__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.discover__content .item {
+  cursor: pointer;
+  background-color: #fff;
+  padding: 1rem 1rem;
+  transition: all 1s linear;
+}
+.discover__content .item:hover {
+  box-shadow: 0 0 20px #000000;
+}
+.discover__content .item .img {
+  overflow: hidden;
+}
+.discover__content .item .img img {
+  transition: all 1s linear;
+}
+.discover__content .item .img:hover img {
+  transform: scale(1.2);
+}
+.discover__content .item h2 {
+  font-size: 1.5rem;
+  font-family: var(--monster);
+}
+.discover__content .item button {
+  width: 100%;
+  padding: 7px 20px;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  border: 0;
+  border-radius: 30px;
+  transition: all 0.5s linear;
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+.animal__content .item button::after {
+  content: "";
+  position: absolute;
+  width: 1%;
+  height: 100%;
+  background-color: aqua;
+  left: 0;
+  top: 0;
+  transition: all 1s linear;
+  z-index: -1;
+}
+.animal__content .item button:hover::after {
+  width: 100%;
+}
+.animal__content .item button:hover {
+  color: white;
+}
+
+.contact {
+  width: 100%;
+  height: 100vh;
+  padding: 4rem 0;
+  background-color: wheat;
+  background-image: url(/img/header-bg.avif);
+  background-size: 50% 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.contact .title h2 {
+  display: inline;
+  border-bottom: 5px solid rgb(6, 54, 187);
+  padding-bottom: 0.5rem;
+}
+
+.contact__content {
+  width: 50%;
+  margin-top: 3rem;
+}
+.contact__content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact__content form input {
+  height: 6vh;
+  font-size: 1.5rem;
+  text-indent: 10px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #000000;
+  background-color: rgba(0, 0, 0, 0);
+}
+.contact__content form textarea {
+  height: 8vh;
+  font-size: 1.5rem;
+  text-indent: 10px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #000000;
+  background-color: rgba(40, 40, 40, 0);
+}
+.contact__content form button {
+  width: 150px;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  transition: all 0.5s linear;
+}
+.contact__content form button:hover {
+  background-color: #000000;
+  color: #fff;
+}
